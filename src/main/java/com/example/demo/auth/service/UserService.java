@@ -37,7 +37,7 @@ public class UserService implements UserDetailsService {
 		
 		Optional<User> userOpt = userRepo.findByUsername(username);
 		
-		if (userOpt.isEmpty()) throw new UsernameNotFoundException("Username not found");
+		if (userOpt.isEmpty()) throw new UsernameNotFoundException("Username not found!");
 		
 		return userOpt.get();
 	}
